@@ -1,0 +1,22 @@
+{% extends 'book_appointment.html' %}
+
+{% block symptoms %}
+
+
+  {% if disease == 1 %}
+  <nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">Predict Disease </span>
+  </nav>
+  <form action="/symptoms">
+    <label for="fname">Enter Your Symptoms :</label><br>
+    <input type="text" id="fname" name="fname" value="Symptoms" required><br>
+    
+    <input type="submit" value="Submit">
+  </form> 
+  {% endif %}
+
+  {% block mental %}
+
+  {% endblock mental %}
+
+  {% endblock symptoms %}

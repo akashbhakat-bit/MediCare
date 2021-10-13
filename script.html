@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block script %}
+
+<p hidden>
+<form id="appoint"action="/change_appoint" method="POST">
+    
+  </form>
+
+  <form id="disease"action="/change_disease" method="POST">
+    
+  </form>
+
+  <form id="machine"action="/change_machine" method="POST">
+    
+  </form>
+</p>
+
+<script>
+
+document.getElementById("fileToUpload").required = true;
+
+
+ function appoint(){
+    document.getElementById("appoint").submit();
+    document.getElementById("appoint_selector").className = "nav-item nav-link active";
+    document.getElementById("machine_selector").className = "nav-item nav-link";
+    document.getElementById("disease_selector").className = "nav-item nav-link ";
+    document.getElementById("search_for_doc").style.display = "block";
+
+
+}
+
+function disease(){
+    document.getElementById("disease").submit();
+    document.getElementById("appoint_selector").className = "nav-item nav-link";
+    document.getElementById("machine_selector").className = "nav-item nav-link";
+    document.getElementById("disease_selector").className = "nav-item nav-link active";
+    document.getElementById("search_for_doc").style.display = "none";
+
+
+}
+
+function machine(){
+    document.getElementById("machine").submit();
+    document.getElementById("appoint_selector").className = "nav-item nav-link";
+    document.getElementById("machine_selector").className = "nav-item nav-link active";
+    document.getElementById("disease_selector").className = "nav-item nav-link";
+    document.getElementById("search_for_doc").style.display = "none";
+
+
+
+}
+
+
+  </script>
+  {% block bar %}
+    
+{% endblock bar %}
+
+{% endblock script %}
